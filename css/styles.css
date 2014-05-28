@@ -4,3 +4,7 @@ ul
     padding: none;
     margin: none;
 }
+
+.panel {
+	clear: both;
+}
