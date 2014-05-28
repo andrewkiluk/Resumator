@@ -26,13 +26,30 @@
 							<li><a href="#" class='kvAddBlock'>Key-Value Type</a></li>
 							<li><a href="#" class='lr-kvAddBlock'> Left-Right Key-Value Type</a></li>
 							<li><a href="#" class='descriptionAddBlock'>Description Type</a></li>
-							<li><a href="#">List Type</a></li>
+							<li><a href="#" class='listAddBlock'>List Type</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 		
+		</div>
+	</div>
+
+	<!-- Name and LaTeX Options -->
+
+	<div class="row">
+		<div class="large-12 columns">
+			<div class="panel">
+				<div class="row">
+					<div class="large-6 columns">
+						<div style="text-align: center;">
+							<input name="name" placeholder="Name" type="text" />
+						</div>
+					</div>
+					
+				</div>
+			</div>
 		</div>
 	</div>
 
@@ -46,17 +63,17 @@
 						<img src="../img/x.png" class="closeBox" width="25" height="25" >
 					</div>
 					<div class="large-4 columns">
-						<h3>Contact Info</h3>
+						<input name="title_0" placeholder="Title" type="text" value="Contact Info">
 					</div>
 					<ul class="entryList">
 						<li>
 							<div class="row">	
 								<div class="large-8 large-offset-2 columns">
 									<div class="large-6 columns" >
-										<input name="input_" + blockIndex + "_" + blockArray[blockIndex].size + '_0' placeholder="Key" type="text" />
+										<input name="input_0_0_0" placeholder="Key" type="text" />
 									</div>
 									<div class="large-6 columns">
-										<input name="input_" + blockIndex + "_" + blockArray[blockIndex].size + '_1' placeholder="Value" type="text" />
+										<input name="input_0_0_1" placeholder="Key" type="text" />
 									</div>
 								</div>
 								<div class="large-2 columns" style="padding: .25rem;">
@@ -79,17 +96,17 @@
 						<img src="../img/x.png" class="closeBox" width="25" height="25" >
 					</div>
 					<div class="large-4 columns">
-						<h3>Education Info</h3>
+						<input name="title_1" placeholder="Title" type="text" value="Education Info" />
 					</div>
 					<ul class="entryList">
 						<li>
 							<div class="row">	
 								<div class="large-8 large-offset-2 columns">
 									<div class="large-6 columns" >
-										<input name="input_" + blockIndex + "_" + blockArray[blockIndex].size + '_0' placeholder="Key" type="text" />
+										<input name="input_1_0_0" placeholder="Key" type="text" />
 									</div>
 									<div class="large-6 columns">
-										<input name="input_" + blockIndex + "_" + blockArray[blockIndex].size + '_1' placeholder="Value" type="text" />
+										<input name="input_1_0_1" placeholder="Key" type="text" />
 									</div>
 								</div>
 								<div class="large-2 columns" style="padding: .25rem;">
@@ -108,29 +125,62 @@
 		<li class="block row descriptionBlock">
 			<div class="large-12 columns">
 				<div class="panel">
-					<div style="float:right;">
+					<div class="large-4 columns">
+						<input name="title_2" placeholder="Title" type="text" value="Projects"/>
+					</div>
+					<div style="float: right;">
 						<img src="../img/x.png" class="closeBox" width="25" height="25" >
 					</div>
 					<div class="large-4 columns">
-						<h3>Projects</h3>
+						<div></div>
 					</div>
 					<ul class="entryList">
 						<li>
 							<div class="row">	
 								<div class="large-8 large-offset-2 columns">
 									<div class="large-6 columns" >
-										<input name="input_" + blockIndex + "_" + blockArray[blockIndex].size + '_0' placeholder="Subtitle" type="text" />
-									</div>
-									<div class="large-6 columns">
-										
+										<input name="input_2_0_0" placeholder="Key" type="text" />
 									</div>
 									<div class="large-12 columns">
-										<textarea rows="4" name="input_" + blockIndex + "_" + blockArray[blockIndex].size + '_1' placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus, nisi at consequat consequat, orci risus mattis dolor, sed luctus leo elit nec felis. Ut porttitor elit felis, at tincidunt arcu commodo ac. Sed dictum augue sed auctor pellentesque. Curabitur adipiscing et turpis quis mollis."></textarea>
+										<textarea rows="4" name="input_2_0_1" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus, nisi at consequat consequat, orci risus mattis dolor, sed luctus leo elit nec felis. Ut porttitor elit felis, at tincidunt arcu commodo ac. Sed dictum augue sed auctor pellentesque. Curabitur adipiscing et turpis quis mollis."></textarea>
 									</div>
 								</div>
 								<div class="large-2 columns" style="padding: .25rem;">
 									&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
 									<img src="../img/plus.png" class="descriptionAddEntry" width="25" height="25" >
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</li>
+
+
+		<!-- Skills Block -->
+		<li class="block row descriptionBlock">
+			<div class="large-12 columns">
+				<div class="panel">
+					<div class="large-4 columns">
+						<input name="title_3" placeholder="Title" type="text" value="Skills"/>
+					</div>
+					<div style="float: right;">
+						<img src="../img/x.png" class="closeBox" width="25" height="25" >
+					</div>
+					<div class="large-4 columns">
+						<div></div>
+					</div>
+					<ul class="entryList">
+						<li>
+							<div class="row">	
+								<div class="large-8 large-offset-2 columns">
+									<div class="large-9 columns" >
+										<input name="input_3_0" placeholder="List Item" type="text" />
+									</div>
+								</div>
+								<div class="large-2 columns" style="padding: .25rem;">
+									&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+									<img src="../img/plus.png" class="listAddEntry" width="25" height="25" >
 								</div>
 							</div>
 						</li>
@@ -165,186 +215,15 @@
 	
 	<script src="../js/foundation.min.js"></script>
 
-	<script type='text/javascript' src="../js/scripts.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
 
 	<script type="text/javascript"> 
-
 		$(document).foundation();
-		
-		var blockArray = [{"type": "keyValueBlock", "size": "1"}, {"type": "lr-keyValueBlock", "size": "1"}, {"type": "descriptionBlock", "size": "1"}];
-
-
-
-
-		// Add a new key-value block
-		$(document).on('click', '.kvAddBlock', function(){
-			var blockIndex = blockArray.length;
-			blockArray[blockIndex] = {"type": "keyValueBlock", "size": "1"};
-
-			$('#blockList').append(
-				'<li class="block row keyValueBlock"><div class="large-12 columns"><div class="panel"><div style="float:right;"><img src="../img/x.png" class="closeBox" width="25" height="25" ></div><div class="large-4 columns">'
-				+ '<input name="title_' + blockIndex + '" placeholder="Title" type="text" />'
-				+ '</div><ul class="entryList"><li><div class="row"><div class="large-8 large-offset-2 columns"><div class="large-6 columns" >'
-				+ '<input name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_0" ' + 'placeholder="Key" type="text" />'
-				+ '</div><div class="large-6 columns">'
-				+ '<input name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_1" ' + 'placeholder="Value" type="text" />'
-				+ '</div></div><div class="large-2 columns" style="padding: .25rem;">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<img src="../img/plus.png" class="kvAddEntry" width="25" height="25" ></div></div></li></ul></div></div></li>'
-			);
-		});
-
-		// Add a new left-right key-value block
-		$(document).on('click', '.lr-kvAddBlock', function(){
-			var blockIndex = blockArray.length;
-			blockArray[blockIndex] = {"type": "lr-keyValueBlock", "size": "1"};
-			$('#blockList').append(
-				'<li class="block row lr-keyValueBlock"><div class="large-12 columns"><div class="panel"><div style="float:right;"><img src="../img/x.png" class="closeBox" width="25" height="25" ></div><div class="large-4 columns">'
-				+ '<input name="title_' + blockIndex + '" placeholder="Title" type="text" />'
-				+ '</div><ul class="entryList"><li><div class="row"><div class="large-8 large-offset-2 columns"><div class="large-6 columns" >'
-				+ '<input name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_0" ' + 'placeholder="Key" type="text" />'
-				+ '</div><div class="large-6 columns">'
-				+ '<input name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_1" ' + 'placeholder="Value" type="text" />'
-				+ '</div></div><div class="large-2 columns" style="padding: .25rem;">&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<img src="../img/plus.png" class="lr-kvAddEntry" width="25" height="25" ></div></div></li></ul></div></div></li>'
-			);
-		});
-
-		// Add a new description block
-		$(document).on('click', '.descriptionAddBlock', function(){
-			var blockIndex = blockArray.length;
-			blockArray[blockIndex] = {"type": "descriptionBlock", "size": "1"};
-			$('#blockList').append(
-				'<li class="block row descriptionBlock"><div class="large-12 columns"><div class="panel"><div style="float:right;"><img src="../img/x.png" class="closeBox" width="25" height="25" ></div><div class="large-4 columns">'
-				+ '<input name="title_' + blockIndex + '" placeholder="Title" type="text" />'
-				+ '</div><ul class="entryList">'
-				+'<li><div class="row">	<div class="large-8 large-offset-2 columns"><div class="large-6 columns" ><input name='
-				+ '"input_' + blockIndex + "_" + blockArray[blockIndex].size + '_0" ' 
-				+ 'placeholder="Subtitle" type="text" /></div><div class="large-6 columns"></div><div class="large-12 columns"><textarea rows="4" name=' 
-				+ '"input_' + blockIndex + "_" + blockArray[blockIndex].size + '_1" ' 
-				+ 'placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus, nisi at consequat consequat, orci risus mattis dolor, sed luctus leo elit nec felis. Ut porttitor elit felis, at tincidunt arcu commodo ac. Sed dictum augue sed auctor pellentesque. Curabitur adipiscing et turpis quis mollis."></textarea></div></div><div class="large-2 columns" style="padding: .25rem;">&nbsp;&nbsp; <img src="../img/plus.png" class="descriptionAddEntry" width="25" height="25" ></div></div></li></ul></div></div></li>'
-
-			);
-		});
-
-
-
-		// TODO
-		// Add a new list block
-
-
-
-
-
-
-
-
-		// Add a new key-value entry
-		$(document).on('click', '.kvAddEntry', function(){
-			var blockIndex = $(this).closest(".block").index();
-			$(this).closest(".entryList").append('<li><div class="row"><div class="large-8 large-offset-2 columns"><div class="large-6 columns" >'
-				+ '<input name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_0" '
-				+ 'placeholder="Key" type="text" /></div><div class="large-6 columns">'
-				+ '<input name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_1" '
-				+ 'placeholder="Value" type="text" /></div></div><div class="large-2 columns" style="padding: .25rem;"><img src="../img/x.png" class="lineRemove" width="25" height="25" >&nbsp;&nbsp; <img src="../img/plus.png" class="kvAddEntry" width="25" height="25" ></div></div></li>');
-			blockArray[blockIndex].size++;
-			$(this).remove();
-		});
-
-		// Add a new left-right key-value entry
-		$(document).on('click', '.lr-kvAddEntry', function(){
-			var blockIndex = $(this).closest(".block").index();
-			$(this).closest(".entryList").append('<li><div class="row"><div class="large-8 large-offset-2 columns"><div class="large-6 columns" >'
-				+ '<input name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_0" '
-				+ 'placeholder="Key" type="text" /></div><div class="large-6 columns">'
-				+ '<input name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_1" '
-				+ 'placeholder="Value" type="text" /></div></div><div class="large-2 columns" style="padding: .25rem;"><img src="../img/x.png" class="lineRemove" width="25" height="25" >&nbsp;&nbsp; <img src="../img/plus.png" class="lr-kvAddEntry" width="25" height="25" ></div></div></li>');
-			blockArray[blockIndex].size++;
-			$(this).remove();
-		});
-
-		// Add a new description entry
-		$(document).on('click', '.descriptionAddEntry', function(){
-			var blockIndex = $(this).closest(".block").index();
-			$(this).closest(".entryList").append('<li><div class="row">	<div class="large-8 large-offset-2 columns"><div class="large-6 columns" >'
-			+ '<input name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_0" ' 
-			+ 'placeholder="Subtitle" type="text" /></div><div class="large-6 columns"></div><div class="large-12 columns">' 
-			+ '<textarea rows="4" name="input_' + blockIndex + "_" + blockArray[blockIndex].size + '_1" ' 
-			+ 'placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus, nisi at consequat consequat, orci risus mattis dolor, sed luctus leo elit nec felis. Ut porttitor elit felis, at tincidunt arcu commodo ac. Sed dictum augue sed auctor pellentesque. Curabitur adipiscing et turpis quis mollis."></textarea></div></div><div class="large-2 columns" style="padding: .25rem;"><img src="../img/x.png" class="lineRemove" width="25" height="25" >&nbsp;&nbsp; <img src="../img/plus.png" class="descriptionAddEntry" width="25" height="25" ></div></div></li>');
-			blockArray[blockIndex].size++;
-			$(this).remove();
-		});
-		
-
-		// TODO
-		// Add a new list entry
-
-
-
-
-
-		// Remove an entry from a block
-		$(document).on('click', '.lineRemove', function(){
-			var blockIndex = $(this).closest(".block").index();
-			if($(this).closest('li').is(':last-child')){
-				if(blockArray[blockIndex].type === 'keyValueBlock'){
-					$(this).closest('li').prev().find('.large-2').append('<img src="../img/plus.png" class="kvAddEntry" width="25" height="25" >');
-				}
-				if(blockArray[blockIndex].type === 'lr-keyValueBlock'){
-					$(this).closest('li').prev().find('.large-2').append('<img src="../img/plus.png" class="lr-kvAddEntry" width="25" height="25" >');
-				}
-				if(blockArray[blockIndex].type === 'descriptionBlock'){
-					$(this).closest('li').prev().find('.large-2').append('<img src="../img/plus.png" class="descriptionAddEntry" width="25" height="25" >');
-				}
-				if(blockArray[blockIndex].type === 'listBlock'){
-					$(this).closest('li').prev().find('.large-2').append('<img src="../img/plus.png" class="listAddEntry" width="25" height="25" >');
-				}
-			}
-
-			blockArray[blockIndex].size--;
-			$(this).closest("li").remove();
-		});
-
-		// Remove a block
-		$(document).on('click', '.closeBox', function(){
-			var blockIndex = $(this).closest(".block").index();
-			blockArray.splice(blockIndex, 1);
-
-			$(this).closest(".block").remove();
-		});
-
-		// Clear all input fields
-		$(document).on('click', '#clearButton', function(){
-			$(document).find('input:text').val('');
-			$(document).find('textarea').val('');
-		});
-
-
-
-		// TODO
-		// Create the resume
-		$(document).on('click', '#resumateButton', function(){
-			//$(document).find('input_0_0_0').val();    
-			var string = "";
-			for(var i in blockArray){
-				string += blockArray[i].type + ": " + blockArray[i].size + ", ";
-			}
-			alert(string);
-		});
 	</script>
+
+	<script type='text/javascript' src="../js/scripts.js"></script>
+
+	
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
