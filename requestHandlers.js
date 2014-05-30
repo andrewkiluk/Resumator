@@ -1,25 +1,34 @@
 var exec = require("child_process").exec;
 var fs = require("fs");
 var path = require("path");
-var qs = require('querystring');
 
 function serve(pathname, response) {
 	console.log("Request handler 'serve' was called");
 
 	pathname = path.join(process.cwd(), pathname);
 
-	if (fs.statSync(pathname).isDirectory()) pathname += '/index.html';
+	path.exists(pathname, function(exists) {
+        if(!exists) {
+            console.log("does not exist: " + pathname);
+            response.writeHead(200, {'Content-Type': 'text/plain'});
+            response.write('404 Not Found\n');
+            response.end();
+            return;
+        }
 
-	fs.readFile(pathname, "binary", function(err, file) {
-		if(err) {
-			response.writeHead(500, {"Content-Type": "text/plain"});
-			response.write(err + "\n");
+        if (fs.statSync(pathname).isDirectory()) pathname += '/index.html';
+
+		fs.readFile(pathname, "binary", function(err, file) {
+			if(err) {
+				response.writeHead(500, {"Content-Type": "text/plain"});
+				response.write(err + "\n");
+				response.end();
+				return;
+			}
+			response.writeHead(200);
+			response.write(file, "binary");
 			response.end();
-			return;
-		}
-		response.writeHead(200);
-		response.write(file, "binary");
-		response.end();
+		});
 	});
 }
 
@@ -37,10 +46,7 @@ function resumate(request, response) {
                 req.connection.destroy();
         });
         request.on('end', function () {
-            var post = qs.parse(body);
-            console.log(post);
-
-            // use post['blah'], etc.
+            console.log(body);
         });
     }
 
