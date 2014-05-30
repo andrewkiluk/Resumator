@@ -237,7 +237,7 @@ $(document).on('click', '#resumateButton', function(){
 
 	$.post( "resumate", resumeJSON)
 		.done(function( data ) {
-			alert( "Data Loaded: " + data );
+			window.location.href = "temp/" + data + "/resume.pdf";
 		});
 
 });
