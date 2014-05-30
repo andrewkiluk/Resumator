@@ -1,33 +1,63 @@
 var exec = require("child_process").exec;
+var fs = require("fs");
+var path = require("path");
+var qs = require('querystring');
 
-function start(response) {
-  console.log("Request handler 'start' was called");
+function serve(pathname, response) {
+	console.log("Request handler 'serve' was called");
 
-  exec("pdflatex " + file_id, function(error, stdout, stderr) {
-    response.writeHead(200, {"Content-Type": "text/plain"});
+	pathname = path.join(process.cwd(), pathname);
 
-    // We should write the entire data? No, probably just a link to it. But then we have to handle that. 
-    // Let's try writing the data of the file, then deleting the fuile from the server.
+	if (fs.statSync(pathname).isDirectory()) pathname += '/index.html';
 
-    // A PHP example:
-    // header('Content-Type: application/pdf');
-    // header('Content-Disposition: attachment; filename=' . $file . ';');
-    // header('Content-Length: ' . filesize($folder . '/' . $file));
-
-readfile($folder . '/' . $file);
-    response.write();
-
-
-    response.end();
-  });
+	fs.readFile(pathname, "binary", function(err, file) {
+		if(err) {
+			response.writeHead(500, {"Content-Type": "text/plain"});
+			response.write(err + "\n");
+			response.end();
+			return;
+		}
+		response.writeHead(200);
+		response.write(file, "binary");
+		response.end();
+	});
 }
 
-function upload() {
-  console.log("Request handler 'upload' was called.");
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hellow Upload");
-  response.end();
+function resumate(request, response) {
+	console.log("Request handler 'resumate' was called.");
+	response.writeHead(200, {"Content-Type": "text/plain"});
+
+	if (request.method == 'POST') {
+        var body = '';
+        request.on('data', function (data) {
+            body += data;
+
+            // Too much POST data, kill the connection!
+            if (body.length > 1e6)
+                req.connection.destroy();
+        });
+        request.on('end', function () {
+            var post = qs.parse(body);
+            console.log(post);
+
+            // use post['blah'], etc.
+        });
+    }
+
+		// We should write the entire data? No, probably just a link to it. But then we have to handle that. 
+		// Let's try writing the data of the file, then deleting the file from the server.
+
+		// A PHP example:
+		// header('Content-Type: application/pdf');
+		// header('Content-Disposition: attachment; filename=' . $file . ';');
+		// header('Content-Length: ' . filesize($folder . '/' . $file));
+
+		//readfile($folder . '/' . $file);
+	response.write("Resumation!!!");
+
+
+	response.end();
 }
 
-exports.start = start;
-exports.upload = upload;
+exports.serve = serve;
+exports.resumate = resumate;

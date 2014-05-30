@@ -23,10 +23,10 @@
 						<div style="float:right">
 							<a href="#" data-dropdown="drop1" data-options="align:left" class="button">Add a Block</a><br>
 							<ul id="drop1" data-dropdown-content class="f-dropdown">
-							<li><a href="#" class='kvAddBlock'>Key-Value Type</a></li>
-							<li><a href="#" class='lr-kvAddBlock'> Left-Right Key-Value Type</a></li>
+							<li><a href="#" class='kvAddBlock'>Labelled List Type</a></li>
+							<li><a href="#" class='lr-kvAddBlock'> Two Column Type</a></li>
 							<li><a href="#" class='descriptionAddBlock'>Description Type</a></li>
-							<li><a href="#" class='listAddBlock'>List Type</a></li>
+							<li><a href="#" class='listAddBlock'>Bulleted List Type</a></li>
 							</ul>
 						</div>
 					</div>
@@ -55,6 +55,8 @@
 
 
 	<ul id='blockList'>
+
+
 		<!-- Contact Info Block -->
 		<li class="block row keyValueBlock">
 			<div class="large-12 columns">
@@ -63,21 +65,69 @@
 						<img src="../img/x.png" class="closeBox" width="25" height="25" >
 					</div>
 					<div class="large-4 columns">
-						<input name="title_0" placeholder="Title" type="text" value="Contact Info">
+						<input name="title" placeholder="Title" type="text" value="Contact Info">
 					</div>
 					<ul class="entryList">
 						<li>
 							<div class="row">	
 								<div class="large-8 large-offset-2 columns">
 									<div class="large-6 columns" >
-										<input name="input_0_0_0" placeholder="Key" type="text" />
+										<input name="input_0_0" placeholder="Key" type="text" value="E-mail"/>
 									</div>
 									<div class="large-6 columns">
-										<input name="input_0_0_1" placeholder="Key" type="text" />
+										<input name="input_0_1" placeholder="Value" type="text" />
 									</div>
 								</div>
 								<div class="large-2 columns" style="padding: .25rem;">
 									&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">	
+								<div class="large-8 large-offset-2 columns">
+									<div class="large-6 columns" >
+										<input name="input_1_0" placeholder="Key" type="text" value="Phone Number" />
+									</div>
+									<div class="large-6 columns">
+										<input name="input_1_1" placeholder="Value" type="text" />
+									</div>
+								</div>
+								<div class="large-2 columns" style="padding: .25rem;">
+									<img src="../img/x.png" class="lineRemove" width="25" height="25" >
+									&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">	
+								<div class="large-8 large-offset-2 columns">
+									<div class="large-6 columns" >
+										<input name="input_2_0" placeholder="Key" type="text" value="GitHub" />
+									</div>
+									<div class="large-6 columns">
+										<input name="input_2_1" placeholder="Value" type="text" />
+									</div>
+								</div>
+								<div class="large-2 columns" style="padding: .25rem;">
+									<img src="../img/x.png" class="lineRemove" width="25" height="25" >
+									&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="row">	
+								<div class="large-8 large-offset-2 columns">
+									<div class="large-6 columns" >
+										<input name="input_3_0" placeholder="Key" type="text" value="LinkedIn"/>
+									</div>
+									<div class="large-6 columns">
+										<input name="input_3_1" placeholder="Value" type="text" />
+									</div>
+								</div>
+								<div class="large-2 columns" style="padding: .25rem;">
+									<img src="../img/x.png" class="lineRemove" width="25" height="25" >
+									&nbsp;
 									<img src="../img/plus.png" class="kvAddEntry" width="25" height="25" >
 								</div>
 							</div>
@@ -96,17 +146,17 @@
 						<img src="../img/x.png" class="closeBox" width="25" height="25" >
 					</div>
 					<div class="large-4 columns">
-						<input name="title_1" placeholder="Title" type="text" value="Education Info" />
+						<input name="title" placeholder="Title" type="text" value="Education Info" />
 					</div>
 					<ul class="entryList">
 						<li>
 							<div class="row">	
 								<div class="large-8 large-offset-2 columns">
 									<div class="large-6 columns" >
-										<input name="input_1_0_0" placeholder="Key" type="text" />
+										<input name="input_0_0" placeholder="Key" type="text" />
 									</div>
 									<div class="large-6 columns">
-										<input name="input_1_0_1" placeholder="Key" type="text" />
+										<input name="input_0_1" placeholder="Value" type="text" />
 									</div>
 								</div>
 								<div class="large-2 columns" style="padding: .25rem;">
@@ -126,7 +176,7 @@
 			<div class="large-12 columns">
 				<div class="panel">
 					<div class="large-4 columns">
-						<input name="title_2" placeholder="Title" type="text" value="Projects"/>
+						<input name="title" placeholder="Title" type="text" value="Projects"/>
 					</div>
 					<div style="float: right;">
 						<img src="../img/x.png" class="closeBox" width="25" height="25" >
@@ -139,10 +189,10 @@
 							<div class="row">	
 								<div class="large-8 large-offset-2 columns">
 									<div class="large-6 columns" >
-										<input name="input_2_0_0" placeholder="Key" type="text" />
+										<input name="input_0_0" placeholder="Key" type="text" />
 									</div>
 									<div class="large-12 columns">
-										<textarea rows="4" name="input_2_0_1" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus, nisi at consequat consequat, orci risus mattis dolor, sed luctus leo elit nec felis. Ut porttitor elit felis, at tincidunt arcu commodo ac. Sed dictum augue sed auctor pellentesque. Curabitur adipiscing et turpis quis mollis."></textarea>
+										<textarea rows="4" name="input_0_1" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi cursus, nisi at consequat consequat, orci risus mattis dolor, sed luctus leo elit nec felis. Ut porttitor elit felis, at tincidunt arcu commodo ac. Sed dictum augue sed auctor pellentesque. Curabitur adipiscing et turpis quis mollis."></textarea>
 									</div>
 								</div>
 								<div class="large-2 columns" style="padding: .25rem;">
@@ -162,7 +212,7 @@
 			<div class="large-12 columns">
 				<div class="panel">
 					<div class="large-4 columns">
-						<input name="title_3" placeholder="Title" type="text" value="Skills"/>
+						<input name="title" placeholder="Title" type="text" value="Skills"/>
 					</div>
 					<div style="float: right;">
 						<img src="../img/x.png" class="closeBox" width="25" height="25" >
@@ -175,7 +225,7 @@
 							<div class="row">	
 								<div class="large-8 large-offset-2 columns">
 									<div class="large-9 columns" >
-										<input name="input_3_0" placeholder="List Item" type="text" />
+										<input name="input_0" placeholder="List Item" type="text" />
 									</div>
 								</div>
 								<div class="large-2 columns" style="padding: .25rem;">
